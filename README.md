@@ -11,7 +11,7 @@
 <h2 class="custom"> 1 | Introduction </h2>
 Eagloo is a software designed for co-registering and analyzing Digital Elevation Models (DEMs). With Eagloo, you can easily co-register, subtract, interpolate, calculate mass and volume, and automatically generate a synthetic PDF. Eagloo is a tool for researchers, scientists, and anyone working with DEMs.
 
-<h2 align="left">   2 | Features</h2>
+<h2 class="custom">   2 | Features</h2>
 Eagloo offers a variety of features to help you analyse your DEMs, including:
 
 ### a | Co-registration: 
