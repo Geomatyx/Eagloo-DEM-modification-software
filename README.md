@@ -26,7 +26,7 @@ Eagloo is a powerful tool for researchers, scientists, and anyone working with D
 
 ## Installation
 Eagloo is only available on Linux.
-  1. Clone this repository: git clone https://github.com/username/repo.git
+  1. Clone this repository: git clone https://github.com/Geomatyx/Eagloo_software.git
   2. Install dependencies
 
 ## Contributing
