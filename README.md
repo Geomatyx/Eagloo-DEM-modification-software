@@ -14,22 +14,22 @@ Eagloo is a software designed for co-registering and analyzing Digital Elevation
 ## 2 | Features
 Eagloo offers a variety of features to help you analyse your DEMs, including:
 
-### a | Co-registration: 
+### - Co-registration: 
 Eagloo offers multiple co-registration methods, including Nuth and Kääb, Iterative Closest Point (ICP), and ICP + Nuth and Kääb.
 
-### b | Subtraction: 
+### - Subtraction: 
 Easily subtract one DEM from another to analyze changes in terrain over time.
 
-### c | Interpolation: 
+### - Interpolation: 
 Eagloo's interpolation capabilities include:
   1. Linear interpolation
   2. Hypsometric interpolation
   3. Local hypsometric interpolation
 
-### d | Mass and volume calculation: 
+### - Mass and volume calculation: 
 Calculate the mass and volume of specific areas within your DEMs.
 
-### e | Synthetic PDF generation: 
+### - Synthetic PDF generation: 
 Eagloo can automatically generate a synthetic PDF to help you quickly and easily visualize your analysis results.
 
 ## 3 | Installation
