@@ -36,7 +36,7 @@ To contribute to this project, please follow these steps:
   2. Create a new branch: git checkout -b feature-branch
   3. Make your changes and commit them: git commit -am 'Add some feature'
   4. Push to the branch: git push origin feature-branch
-  5. Create a pull request
+  5. Create a pull request 
 
 ##  5 - Credits
 This project was created by [Geomatyx](https://geomatyx.com)
