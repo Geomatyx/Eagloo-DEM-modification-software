@@ -1,5 +1,8 @@
 <p align="center">
   # Eagloo Software
+</p>
+
+<p align="center">
 <img src="/Eagloo_frontend_functions/eagloo_logo.png" width="200px" height="200px" style="text-align:center;">
 </p>
 ##  1 | Introduction
