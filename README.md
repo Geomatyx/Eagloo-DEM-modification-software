@@ -42,4 +42,4 @@ To contribute to this project, please follow these steps:
 This project was created by [Geomatyx](https://geomatyx.com)
 
 ## License
-This project is licensed under the MIT license. See the [LICENCE](/LICENCE) file for details.
+This project is licensed under the MIT license. See the [LICENSE](/LICENSE) file for details.
