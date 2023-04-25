@@ -945,6 +945,8 @@ class ICP(Coreg):
         # Subtract by the bounding coordinates to avoid float32 rounding errors.
         x_coords -= centroid[0]
         y_coords -= centroid[1]
+        print(centroid)
+        
         for key, dem in zip(["ref", "tba"], [ref_dem, tba_dem]):
 
             gradient_x, gradient_y = np.gradient(dem)
@@ -967,6 +969,9 @@ class ICP(Coreg):
             points[key] = point_cloud[~np.any(np.isnan(point_cloud), axis=1)].astype("float32")
 
             icp = cv2.ppf_match_3d_ICP(self.max_iterations, self.tolerance, self.rejection_scale, self.num_levels)
+            
+            
+            
         if verbose:
             print("Running ICP...")
         try:
@@ -983,11 +988,18 @@ class ICP(Coreg):
     
         if verbose:
             print("ICP finished")
-
+            
         assert residual < 1000, f"ICP coregistration failed: residual={residual}, threshold: 1000"
 
         self._meta["centroid"] = centroid
         self._meta["matrix"] = matrix
+        self._meta["residual"]=residual
+        
+        def _to_matrix_func(self) -> np.ndarray:
+            """Return a transformation matrix from the estimated offsets."""
+            return matrix
+
+
 
 
 class Deramp(Coreg):
@@ -1079,14 +1091,15 @@ class Deramp(Coreg):
 
         self._meta["coefficients"] = coefs[0]
         self._meta["func"] = lambda x, y: poly2d(x, y, coefs[0])
-
+        
+        
     def _apply_func(self, dem: np.ndarray, transform: rio.transform.Affine, **kwargs) -> np.ndarray:
         """Apply the deramp function to a DEM."""
         x_coords, y_coords = _get_x_and_y_coords(dem.shape, transform)
 
         ramp = self._meta["func"](x_coords, y_coords)
-
         return dem + ramp
+    
 
     def _apply_pts_func(self, coords: np.ndarray) -> np.ndarray:
         """Apply the deramp function to a set of points."""
@@ -1103,14 +1116,18 @@ class Deramp(Coreg):
                 "Nonlinear deramping degrees cannot be represented as transformation matrices."
                 f" (max 1, given: {self.degree})")
         if self.degree == 1:
-            raise NotImplementedError("Vertical shift, rotation and horizontal scaling has to be implemented.")
-
-        # If degree==0, it's just a bias correction
-        empty_matrix = np.diag(np.ones(4, dtype=float))
-
-        empty_matrix[2, 3] += self._meta["coefficients"][0]
-
-        return empty_matrix
+            empty_matrix = np.diag(np.ones(4, dtype=float))
+    
+            empty_matrix[2, 3] += self._meta["coefficients"][0]
+            print ("WARNING !!! rotation and horizontal x,y offset not implemented in the matrix rotation for DERAMP !!! WARNING")
+            return empty_matrix
+        
+        if self.degree==0:
+            # If degree==0, it's just a bias correction
+            empty_matrix = np.diag(np.ones(4, dtype=float))
+            empty_matrix[2, 3] += self._meta["coefficients"][0]
+    
+            return empty_matrix
 
 
 class CoregPipeline(Coreg):

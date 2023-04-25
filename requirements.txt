@@ -1,0 +1,25 @@
+os
+geoutils 
+matplotlib
+numpy 
+xdem
+rasterio
+geopandas
+fiona
+import Eagloo_backend_functions.coreg_xdem as coreg_xdem
+shutil
+time
+datetime 
+osgeo 
+fpdf 
+PIL 
+PySimpleGUI
+io
+base64
+traceback
+sys
+psutil
+inspect
+freetype=2.10.4
+pymupdf
+PyMuPDF

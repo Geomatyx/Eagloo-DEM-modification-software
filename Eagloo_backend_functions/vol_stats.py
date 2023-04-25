@@ -24,16 +24,25 @@ from pygeotools.lib import timelib
 #    parser.add_argument('-rho', type=float, default=0.917, help='Density for mass change calculation (default: %(default)s)')
 #    return parser
 
-def volume_mass_stats(parser, fn, rho, path_out,title):
+def volume_mass_stats(parser,                              # description
+                      fn,                                  # dDEM file
+                      rho,                                 # density of the ice
+                      path_out,                            # path where the files will be saved
+                      title,                               # Title 
+                      calculate_uncertainty,               # Boolean, would you to like calculate the uncertainty 
+                      uncertainty_of_the_volume_change=0,  # mean standard error of the 
+                      error_rho_density=0,                 # error of the density
+                      error_glacier_outline=0              # error of the glacier outline
+                      ):
     
     #Parser : description
-    #fn : DEM file , type : str
+    #fn :  , type : str
     #rho : density for mass change calculation, type : float, default=0.917
     #This is mean density for N Cascades snow
     #rho = 0.5
     #Density of pure ice 
    
-    #If number is in kg/m^3 rather than g/cc
+    #If number is in kg/m³ rather than g/cc
     if rho > 10.:
         rho /= 1000.
 
@@ -77,44 +86,94 @@ def volume_mass_stats(parser, fn, rho, path_out,title):
     s_gt = s_km3*rho
     #s_mm = s_gt/374
     #https://climatesanity.wordpress.com/conversion-factors-for-ice-and-water-mass-and-volume/
-    s_mm = s_gt/360
-
-    if dt_yr is not None:
-        print("%s to %s: %0.2f yr" % (ts[0], ts[1], dt_yr))
-        print("%0.0f m^3 (%0.0f m^3/yr)" % (s_m3, s_m3/dt_yr))
-        print("%0.3f km^3 (%0.3f km^3/yr)" % (s_km3, s_km3/dt_yr))
-        print("Density: %0.3f g/cc" % rho)
-        print("%0.3f GT (%0.3f GT/yr)" % (s_gt, s_gt/dt_yr))
-        print("%0.6f mm SLR (%0.6f mm/yr)" % (s_mm, s_mm/dt_yr))
-        print("%0.3f m.w.e. (%0.3f m.w.e./yr)" % (s_mwe, s_mwe/dt_yr))
-        open(f"{path_out}/volume_mass_{title}_results.txt", 'w').close()
-        with open(f"{path_out}/volume_mass_{title}_results.txt", "a") as o:
-            o.write("%s to %s: %0.2f yr \n\n" % (ts[0], ts[1], dt_yr))
-            o.write("%0.0f m^3 (%0.0f m^3/yr) \n\n" % (s_m3, s_m3/dt_yr))
-            o.write("%0.3f km^3 (%0.3f km^3/yr) \n\n" % (s_km3, s_km3/dt_yr))
-            o.write("Density: %0.3f g/cc \n\n" % rho)
-            o.write("%0.3f GT (%0.3f GT/yr) \n\n" % (s_gt, s_gt/dt_yr))
-            o.write("%0.6f mm SLR (%0.6f mm/yr) \n\n" % (s_mm, s_mm/dt_yr))
-            o.write("%0.3f m.w.e. (%0.3f m.w.e./yr) \n\n" % (s_mwe, s_mwe/dt_yr))
-    else:
-        print("Area: %0.2f km2" % (area/1E6))
-        print("%0.0f m^3" % s_m3)
-        print("%0.3f km^3" % s_km3) 
-        print("Density: %0.3f g/cc" % rho)
-        print("%0.3f GT" % s_gt)
-        print("%0.6f mm SLR" % s_mm)
-        print("%0.3f m.w.e." % s_mwe)
-        open(f"{path_out}/volume_mass_{title}_results.txt", 'w').close()
-        with open(f"{path_out}/volume_mass_{title}_results.txt", "a") as o:
-            o.write("Area: %0.2f km2 \n\n" % (area/1E6))
-            o.write("%0.0f m^3 \n\n" % s_m3)
-            o.write("%0.3f km^3 \n\n" % s_km3) 
-            o.write("Density: %0.3f g/cc \n\n" % rho)
-            o.write("%0.3f GT \n\n" % s_gt)
-            o.write("%0.6f mm SLR \n\n" % s_mm)
-            o.write("%0.3f m.w.e. \n\n" % s_mwe)
+    s_mm = -s_gt/360
+    
+    #uncertainty 
+    if calculate_uncertainty:
+        mass_balance_error=abs(s_m3)*np.sqrt((uncertainty_of_the_volume_change/s_m3)**2+
+                            (error_rho_density/rho)**2+
+                            (error_glacier_outline/area)**2
+                            )
+        mass_balance_error_gt= mass_balance_error/1E9
+        sea_level_rise_error= mass_balance_error_gt/360
+        s_mwe_error=abs(s_mwe)*np.sqrt((uncertainty_of_the_volume_change/s_m3)**2+
+                            (error_rho_density/rho)**2+
+                            (error_glacier_outline/area)**2
+                            )
+    #
+    if calculate_uncertainty:
+        if dt_yr is not None:
+            print(" - Period : %s to %s: %0.2f yr  " % (ts[0], ts[1], dt_yr))
+            print(" - Volume difference : %0.0f m³ (%0.0f m³/yr)  " % (s_m3, s_m3/dt_yr))
+            print(" - Volume difference : %0.3f km³ (%0.3f km³/yr)  " % (s_km3, s_km3/dt_yr))
+            print(" - Density : %0.3f ± g/cc " % rho)
+            print(" - Mass difference : %0.5f GT (%0.5f GT/yr) " % (s_gt, s_gt/dt_yr))
+            print(" - Contribution to sea level rise : %0.6f mm SLR (%0.6f mm/yr) " % (s_mm, s_mm/dt_yr))
+            print(" - Meter water equivalent : %0.5f m.w.e. (%0.5f m.w.e./yr) " % (s_mwe, s_mwe/dt_yr))
+            open(f"{path_out}/volume_mass_{title}_results.doc ", 'w').close()
+            with open(f"{path_out}/volume_mass_{title}_results.doc", "a") as o:
+                o.write(" - Period : ** %s to %s: %0.2f yr**\n\n" % (ts[0], ts[1], dt_yr))
+                o.write(" - Area : **%0.2f ± %0.2f km² **\n\n" % (area/1E6, error_glacier_outline/1E6 ))
+                o.write(" - Volume difference : **%0.0f ± %0.0f m³ (%0.0f ± %0.0f m³/yr)**\n\n" % (s_m3, uncertainty_of_the_volume_change,s_m3/dt_yr,uncertainty_of_the_volume_change/dt_yr))
+                o.write(" - Volume difference : **%0.4f ± %0.4f km³ (%0.4f ± %0.4f km³/yr)**\n\n" % (s_km3,uncertainty_of_the_volume_change/1E9, s_km3/dt_yr, uncertainty_of_the_volume_change/(dt_yr*1E9)))
+                o.write(" - Density :** %0.3f ± %0.3f g/cc \n\n" % (rho,error_rho_density))
+                o.write(" - Mass difference : **%0.4f ± %0.4f GT (%0.4f ± %0.4f GT/yr)**\n\n" % (s_gt, mass_balance_error_gt, s_gt/dt_yr,mass_balance_error_gt/dt_yr))
+                o.write(" - Contribution to sea level rise : **%0.6f ± %0.6f mm SLR (%0.6f ± %0.6f mm/yr)**\n\n" % (s_mm, sea_level_rise_error, s_mm/dt_yr,sea_level_rise_error/dt_yr))
+                o.write(" - Meter water equivalent :** %0.4f ± %0.4f m.w.e. (%0.4f ± %0.4f m.w.e./yr)**\n\n" % (s_mwe, s_mwe_error,s_mwe/dt_yr,s_mwe_error/dt_yr))
+        else:
+            print(" - Area: %0.2f km²" % (area/1E6))
+            print(" - Volume difference : %0.0f m³" % s_m3)
+            print(" - Volume difference : %0.3f km³" % s_km3) 
+            print(" - Density: %0.3f g/cc" % rho)
+            print(" - Mass difference : %0.3f GT" % s_gt)
+            print(" - Contribution to sea level rise : %0.6f mm SLR" % s_mm)
+            print(" - Meter water equivalent : %0.3f m.w.e." % s_mwe)
+            open(f"{path_out}/volume_mass_{title}_results.doc", 'w').close()
+            with open(f"{path_out}/volume_mass_{title}_results.doc", "a") as o:
+                o.write(" - Area : **%0.2f ± %0.2f km² **\n\n" % (area/1E6, error_glacier_outline/1E6 ))
+                o.write(" - Volume difference : **%0.0f ± %0.3f m³ **\n\n" % (s_m3, uncertainty_of_the_volume_change) )
+                o.write(" - Volume difference : **%0.4f ± %0.4f km³ **\n\n" % (s_km3, uncertainty_of_the_volume_change/1E9)) 
+                o.write(" - Density:** %0.3f ± %0.3f g/cc** \n\n" % (rho,error_rho_density))
+                o.write(" - Mass difference : **%0.4f ± %0.4f GT **\n\n" % (s_gt,mass_balance_error_gt))
+                o.write(" - Contribution to sea level rise : **%0.6f ± %0.6f mm SLR** \n\n" % (s_mm, sea_level_rise_error))
+                o.write(" - Meter water equivalent : **%0.4f ± %0.4f m.w.e.** \n\n" % (s_mwe, s_mwe_error))
+                
+    else: # No uncertainties calculate
+        if dt_yr is not None:
+            print(" - Period : %s to %s: %0.2f yr  " % (ts[0], ts[1], dt_yr))
+            print(" - Volume difference : %0.0f m³ (%0.0f m³/yr)  " % (s_m3, s_m3/dt_yr))
+            print(" - Volume difference : %0.3f km³ (%0.3f km³/yr)  " % (s_km3, s_km3/dt_yr))
+            print(" - Density : %0.3f g/cc " % rho)
+            print(" - Mass difference : %0.3f GT (%0.3f GT/yr) " % (s_gt, s_gt/dt_yr))
+            print(" - Contribution to sea level rise : %0.6f mm SLR (%0.6f mm/yr) " % (s_mm, s_mm/dt_yr))
+            print(" - Meter water equivalent : %0.3f m.w.e. (%0.3f m.w.e./yr) " % (s_mwe, s_mwe/dt_yr))
+            open(f"{path_out}/volume_mass_{title}_results.doc ", 'w').close()
+            with open(f"{path_out}/volume_mass_{title}_results.doc", "a") as o:
+                o.write(" - Period : **%s to %s: %0.2f yr**\n\n" % (ts[0], ts[1], dt_yr))
+                o.write(" - Area : **%0.2f km²** \n\n" % (area/1E6))
+                o.write(" - Volume difference : **%0.0f m³ (%0.0f m³/yr)**\n\n" % (s_m3, s_m3/dt_yr))
+                o.write(" - Volume difference :** %0.3f km³ (%0.3f km³/yr)**\n\n" % (s_km3, s_km3/dt_yr))
+                o.write(" - Density :** %0.3f g/cc**" % (rho))
+                o.write(" - Mass difference : **%0.3f GT (%0.3f GT/yr)**\n\n" % (s_gt, s_gt/dt_yr))
+                o.write(" - Contribution to sea level rise : **%0.6f mm SLR (%0.6f mm/yr)**\n\n" % (s_mm, s_mm/dt_yr))
+                o.write(" - Meter water equivalent : **%0.3f m.w.e. (%0.3f m.w.e./yr)**\n\n" % (s_mwe, s_mwe/dt_yr))
+        else:
+            print(" - Area: %0.2f km²" % (area/1E6))
+            print(" - Volume difference : %0.0f m³" % s_m3)
+            print(" - Volume difference : %0.3f km³" % s_km3) 
+            print(" - Density: %0.3f g/cc" % rho)
+            print(" - Mass difference : %0.3f GT" % s_gt)
+            print(" - Contribution to sea level rise : %0.6f mm SLR" % s_mm)
+            print(" - Meter water equivalent : %0.3f m.w.e." % s_mwe)
+            open(f"{path_out}/volume_mass_{title}_results.doc", 'w').close()
+            with open(f"{path_out}/volume_mass_{title}_results.doc", "a") as o:
+                o.write(" - Area :**%0.2f km² **\n\n" % (area/1E6))
+                o.write(" - Volume difference : **%0.0f m³ **\n\n" % s_m3)
+                o.write(" - Volume difference :** %0.3f km³ **\n\n" % s_km3) 
+                o.write(" - Density: **%0.3f g/cc **\n\n" % (rho))
+                o.write(" - Mass difference :** %0.3f GT** \n\n" % (s_gt))
+                o.write(" - Contribution to sea level rise : **%0.6f mm SLR** \n\n" % (s_mm))
+                o.write(" - Meter water equivalent : **%0.3f m.w.e.** \n\n" % (s_mwe))
         
     print('\n')
 
-if __name__ == "__main__":
-    main()
