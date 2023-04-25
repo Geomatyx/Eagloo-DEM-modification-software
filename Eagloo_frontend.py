@@ -292,7 +292,6 @@ layout = [
  # %% Backend of the frontend
 window = sg.Window('Eagloo DEM Modification Software',layout , resizable=True, finalize=True, element_justification='center', location=(0,0))
 # ---===--- Loop taking in user input and using it to call scripts --- #
-window.Maximize()
 
 
 tab_keys_out = ('-image_tab-','-graph_tab-')
