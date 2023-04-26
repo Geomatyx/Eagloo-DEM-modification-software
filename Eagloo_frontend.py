@@ -5,7 +5,7 @@ Created on Fri Apr 29 17:48:29 2022
 
 @author: Guillaume Pfundstein
 
-V2
+V3
 """
 
 path_function="Eagloo_frontend_functions"
@@ -292,7 +292,6 @@ layout = [
  # %% Backend of the frontend
 window = sg.Window('Eagloo DEM Modification Software',layout , resizable=True, finalize=True, element_justification='center', location=(0,0))
 # ---===--- Loop taking in user input and using it to call scripts --- #
-
 
 tab_keys_out = ('-image_tab-','-graph_tab-')
 list_tab=['Required inputs', 'Co-registration','Subtraction','Interpolation','Mass and volume calculation','Errors','Output']
