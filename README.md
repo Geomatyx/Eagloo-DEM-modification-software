@@ -35,7 +35,8 @@ Eagloo can automatically generate a synthetic PDF to help you quickly and easily
 ## 3 | Installation
 Currently, Eagloo is only available on Linux.
   1. Clone this repository: git clone https://github.com/Geomatyx/Eagloo_software.git
-  2. Install dependencies
+  2. Install dependencies, right-click on "installing_dependencies.sh" and click on "run as program" (if "run as program" is not displayed: Preferences -> Permissions -> "Allow executing file as program")
+  3. Open the software, right-click on "Eagloo_software.sh" and click on "run as program" (if "run as program" is not displayed: Preferences -> Permissions -> "Allow executing file as program")
 
 ## 4 | Contributing
 To contribute to this project, please follow these steps:
