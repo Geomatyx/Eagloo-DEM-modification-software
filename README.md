@@ -5,7 +5,7 @@
 <h1 align="center">DEM modification software</h1>
 
 <p align="center">
-<img src="/Eagloo_frontend_functions/eagloo_logo.png" width="200px" height="200px" style="text-align:center;">
+<img src="/Eagloo_frontend_functions/eagloo_logo.png" height="300px" style="text-align:center;">
 </p>
 
 ## 1 | Introduction
