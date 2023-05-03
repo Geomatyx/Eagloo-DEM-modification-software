@@ -74,16 +74,20 @@ Various external libraries and packages were utilized, with the most frequently 
 <br><br>
 
 ### 6.1 | Frontend
-The user interface was developed using the [PySimpleGUI] (https://www.pysimplegui.org/en/latest/) package (under GNU GPL license).
+The user interface was developed using the [PySimpleGUI](https://www.pysimplegui.org/en/latest/) package (under GNU GPL license).
 <br><br>
 
 ### 6.2 | Processing data
 To modify certain input and output data, the [GDAL](https://github.com/OSGeo/gdal) framework was utilized (under MIT license).
+Source: <br>
+GDAL/OGR contributors (2022). GDAL/OGR Geospatial Data Abstraction
+  software Library. Open Source Geospatial Foundation. URL https://gdal.org
+  [![Zenodo](https://zenodo.org/badge/doi/10.5281/zenodo.5884351.svg)]
 <br><br>
 
 ### 6.3 | Co-registration, Interpolation, Errors
 The functions used for co-registration, interpolation, and calculating errors of the digital elevation models (DEMs) are from the [xDEM](https://github.com/GlacioHack/xdem) package (under MIT license).<br>
-Sources: <br>
+Source: <br>
 xDEM: [![Zenodo](https://zenodo.org/badge/doi/10.5281/zenodo.4809697.svg)](https://zenodo.org/record/4809698)
 
 Related study:
