@@ -78,11 +78,11 @@ The user interface was developed using the [PySimpleGUI](https://www.pysimplegui
 <br><br>
 
 ### 6.2 | Processing data
-To modify certain input and output data, the [GDAL](https://github.com/OSGeo/gdal) framework was utilized (under MIT license).
+To modify certain input and output data, the [GDAL](https://github.com/OSGeo/gdal) framework was utilized (under MIT license). <br>
 Source: <br>
 GDAL/OGR contributors (2022). GDAL/OGR Geospatial Data Abstraction
-  software Library. Open Source Geospatial Foundation. URL https://gdal.org
-  [![Zenodo](https://zenodo.org/badge/doi/10.5281/zenodo.5884351.svg)]
+  software Library. Open Source Geospatial Foundation. URL https://gdal.org <br>
+  [![Zenodo]](https://zenodo.org/badge/doi/10.5281/zenodo.5884351.svg)
 <br><br>
 
 ### 6.3 | Co-registration, Interpolation, Errors
