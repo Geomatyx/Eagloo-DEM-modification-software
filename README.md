@@ -45,7 +45,7 @@ Calculate the mass and volume of specific areas within your DEMs.
 <br><br>
 
 ### 2.6 | Synthetic PDF generation: 
-Eagloo can automatically generate a synthetic PDF to help you quickly and easily visualize your analysis results.
+Eagloo can automatically generate a synthetic PDF to help you efficiently visualize results of your analysis.
 You can click [here](/Eagloo_frontend_functions/github_assets/example_report_2013_2017_nuth_kaab.pdf) to see an example of a pdf report.
 <br><br><br>
 
