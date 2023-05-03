@@ -82,8 +82,8 @@ To modify certain input and output data, the [GDAL](https://github.com/OSGeo/gda
 <br><br>
 
 ### 6.3 | Co-registration, Interpolation, Errors
-The functions used for co-registration, interpolation, and calculating errors of the digital elevation models (DEMs) are from the [xDEM](https://github.com/GlacioHack/xdem) package (under MIT license).
-Sources: 
+The functions used for co-registration, interpolation, and calculating errors of the digital elevation models (DEMs) are from the [xDEM](https://github.com/GlacioHack/xdem) package (under MIT license).<br>
+Sources: <br>
 xDEM: [![Zenodo](https://zenodo.org/badge/doi/10.5281/zenodo.4809697.svg)](https://zenodo.org/record/4809698)
 
 Related study:
