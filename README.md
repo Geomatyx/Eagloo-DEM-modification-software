@@ -111,7 +111,7 @@ Related study:
 <br><br>
 
 ### 6.4 | PDF 
-To automatically generate a PDF report, the [FPDF](http://www.fpdf.org/) library was utilized(no usage restriction). 
+To automatically generate a PDF report, the [FPDF](http://www.fpdf.org/) library was utilized (no usage restriction). 
 <br><br><br>
 
 ## 7 | Recognition of Open Source use
