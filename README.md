@@ -83,6 +83,27 @@ To modify certain input and output data, the [GDAL](https://github.com/OSGeo/gda
 
 ### 6.3 | Co-registration, Interpolation, Errors
 The functions used for co-registration, interpolation, and calculating errors of the digital elevation models (DEMs) are from the [xDEM](https://github.com/GlacioHack/xdem) package (under MIT license).
+Sources: 
+xDEM: Zenodo
+
+Related study:
+
+    Coregistration:
+        Horizontal shift from aspect/slope relationship of Nuth and Kääb (2011),
+        Iterative closest point (ICP) of Besl and McKay (1992),
+    Bias correction:
+        Along-track multi-sinusoidal noise by basin-hopping of Girod et al. (2017),
+    Uncertainty analysis:
+        Heteroscedasticity and multi-range correlations from stable terrain of Hugonnet et al. (2022),
+    Terrain attributes:
+        Slope, aspect and hillshade of either Horn (1981) or Zevenbergen and Thorne (1987),
+        Profile, plan and maximum curvature of Zevenbergen and Thorne (1987),
+        Topographic position index of Weiss (2001),
+        Terrain ruggedness index of either Riley et al. (1999) or Wilson et al. (2007),
+        Roughness of Dartnell (2000),
+        Rugosity of Jenness (2004),
+        Fractal roughness of Taud et Parrot (2005).
+
 <br><br>
 
 ### 6.4 | PDF 
