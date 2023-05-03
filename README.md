@@ -9,24 +9,24 @@
 </p>
 
 ## 1 | Introduction
-This software is designed for simplified some Digital Elevation Models (DEMs) modelisation. It is made to co-register, subtract, interpolate, calculate mass and volume, and automatically generate a synthetic PDF. Eagloo is a tool for researchers, scientists, and anyone working with DEMs.
+Eagloo is a package designed for simplified Digital Elevation Models (DEMs) modification. It is made to co-register, subtract, interpolate, calculate mass and volume, and automatically generate a synthetic PDF. Eagloo is a tool for researchers, scientists, and anyone working with DEMs.
 
-## 2 | Purposes of this software  
-- Create a user interface that allows the use of specific functions for processing and analyzing digital elevation models (DEMs) without any knowledge of code.
-- Improve the efficiency of DEM processing by providing an easier method for selecting input data using a pipeline approach.
-- Automatically generate reports.
+## 2 | Work carried out 
+- Creation of a user interface that allows the use of specific functions for processing and analyzing digital elevation models (DEMs) without any knowledge of code
+- Improving the efficiency of DEM processing by using a pipeline approach
+- Creation of a function for automatically generate reports
 
 ## 3 | External Open Source ressources used
-Various external libraries and frameworks were utilized, with the most frequently used resources presented below. A comprehensive list of all libraries used can be found at the bottom of the page.
+Various external libraries and packages were utilized, with the most frequently used resources presented below. A comprehensive list of all libraries used can be found at the bottom of the page.
 
 ### Frontend
-The user interface was developed using the [PySimpleGUI](https://www.pysimplegui.org/en/latest/) library(under GNU GPL license).
+The user interface was developed using the [PySimpleGUI] (https://www.pysimplegui.org/en/latest/) package (under GNU GPL license).
 
 ### Processing data
-To modify certain input and output data, the [GDAL](https://github.com/OSGeo/gdal) framework was utilized(under MIT license).
+To modify certain input and output data, the [GDAL](https://github.com/OSGeo/gdal) framework was utilized (under MIT license).
 
 ### Co-registration, Interpolation, Errors
-The functions used for co-registration, interpolation, and calculating errors of the digital elevation models (DEMs) are from the [xDEM](https://github.com/GlacioHack/xdem)(under MIT license).
+The functions used for co-registration, interpolation, and calculating errors of the digital elevation models (DEMs) are from the [xDEM](https://github.com/GlacioHack/xdem) package (under MIT license).
 
 ### PDF 
 To automatically generate a PDF report, the [FPDF](http://www.fpdf.org/) library was utilized(no usage restriction). 
@@ -80,7 +80,6 @@ This repository is open-source and is licensed under the MIT license. See the [L
 
 In the Eagloo Repository these external open source packages were used at least one time. 
 
-    
     attrs
     Brotli
     ConfigParser
