@@ -16,27 +16,33 @@ It is a tool for researchers, scientists, and anyone working with DEMs.
 
 ## 2 | Features
 This software offers a variety of features to help you analyse your DEMs, including:
+  <br><br> 
   
 ### - Co-registration: 
 Eagloo offers multiple co-registration methods, including Nuth and Kääb, Iterative Closest Point (ICP), and ICP + Nuth and Kääb.
+<br><br>
 
 ### - Subtraction: 
 Easily subtract one DEM from another to analyze changes in terrain over time.
+<br><br>
 
 ### - Interpolation: 
 Eagloo's interpolation capabilities include:
   1. Linear interpolation
   2. Hypsometric interpolation
   3. Local hypsometric interpolation
+<br><br>
 
 ### - Errors:
 Errors can be calculated through those different methods: 
   1. Unstandardized non-stationnarity errors 
   2. Standardized non-stationnarity errors
   3. Integrated and mean standardized error
+<br><br>
 
 ### - Mass and volume calculation: 
 Calculate the mass and volume of specific areas within your DEMs.
+<br><br>
 
 ### - Synthetic PDF generation: 
 Eagloo can automatically generate a synthetic PDF to help you quickly and easily visualize your analysis results.
@@ -47,33 +53,41 @@ You can click [here](/Eagloo_frontend_functions/github_assets/example_report_201
 <img src="/Eagloo_frontend_functions/github_assets/eagloo_frontend.jpg" height="500px" style="text-align:center;">
 </p>
 <br><br><br>
+
 ## 4 | Installation
 Eagloo is only available on Linux.
   1. Clone this repository: git clone https://github.com/Geomatyx/Eagloo_software.git
   2. Install dependencies, right-click on "installing_dependencies.sh" and click on "run as program" (if "run as program" is not displayed: Preferences -> Permissions -> "Allow executing file as program")
   3. Open the software, right-click on "Eagloo_software.sh" and click on "run as program" (if "run as program" is not displayed: Preferences -> Permissions -> "Allow executing file as program")
 <br><br><br>
+
 ## 5 | Work carried out 
 The work is consisting to:
 - Create a user interface that allows the use of specific functions for processing and analyzing digital elevation models (DEMs) without any knowledge of code
 - Improve the efficiency of DEM processing by using a pipeline approach
 - Create of a function for automatically generate reports
 <br><br><br>
+
 ## 6 | External Open Source ressources used
 Various external libraries and packages were utilized, with the most frequently used resources presented below. A comprehensive list of all libraries used can be found [here](#9 | Recognition of Open Source use).
+<br><br>
 
 ### Frontend
 The user interface was developed using the [PySimpleGUI] (https://www.pysimplegui.org/en/latest/) package (under GNU GPL license).
+<br><br>
 
 ### Processing data
 To modify certain input and output data, the [GDAL](https://github.com/OSGeo/gdal) framework was utilized (under MIT license).
+<br><br>
 
 ### Co-registration, Interpolation, Errors
 The functions used for co-registration, interpolation, and calculating errors of the digital elevation models (DEMs) are from the [xDEM](https://github.com/GlacioHack/xdem) package (under MIT license).
+<br><br>
 
 ### PDF 
 To automatically generate a PDF report, the [FPDF](http://www.fpdf.org/) library was utilized(no usage restriction). 
 <br><br><br>
+
 ## 7 | Recognition of Open Source use
 
 In the Eagloo Repository these external open source packages were used at least one time. 
@@ -120,10 +134,12 @@ In the Eagloo Repository these external open source packages were used at least 
     tornado
     tqdm
     xdem
-<br><br><br>    
+<br><br><br>   
+
 ## 8 | License
 This repository is open-source and is licensed under the MIT license. See the [LICENSE](/LICENSE) file for details.
 <br><br><br>
+
 ## 9 | Contributing
 To contribute to this project, please follow these steps:
 
