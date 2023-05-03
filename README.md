@@ -70,7 +70,7 @@ The work which was carried out here is:
 <br><br><br>
 
 ## 6 | External Open Source ressources used
-Various external libraries and packages were utilized, with the most frequently used resources presented below. A comprehensive list of all libraries used can be found [here](#7--recognition-of-open-source-use).
+Various external libraries and packages were utilized. The most frequently used resources are presented below. A comprehensive list of all libraries used can be found [here](#7--recognition-of-open-source-use).
 <br><br>
 
 ### 6.1 | Frontend
