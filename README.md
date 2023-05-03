@@ -69,7 +69,7 @@ The work is consisting to:
 <br><br><br>
 
 ## 6 | External Open Source ressources used
-Various external libraries and packages were utilized, with the most frequently used resources presented below. A comprehensive list of all libraries used can be found [here](#9 | Recognition of Open Source use).
+Various external libraries and packages were utilized, with the most frequently used resources presented below. A comprehensive list of all libraries used can be found [here](#7 | Recognition of Open Source use).
 <br><br>
 
 ### Frontend
