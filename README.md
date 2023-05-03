@@ -46,7 +46,7 @@ You can click [here](/Eagloo_frontend_functions/github_assets/example_report_201
 </p>
 
 ## 4 | Installation
-Currently, Eagloo is only available on Linux.
+Eagloo is only available on Linux.
   1. Clone this repository: git clone https://github.com/Geomatyx/Eagloo_software.git
   2. Install dependencies, right-click on "installing_dependencies.sh" and click on "run as program" (if "run as program" is not displayed: Preferences -> Permissions -> "Allow executing file as program")
   3. Open the software, right-click on "Eagloo_software.sh" and click on "run as program" (if "run as program" is not displayed: Preferences -> Permissions -> "Allow executing file as program")
