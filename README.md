@@ -18,36 +18,37 @@ It is a tool for researchers, scientists, and anyone working with DEMs.
 This software offers a variety of features to help you analyse your DEMs, including:
   <br><br> 
   
-### - Co-registration: 
+### 2.1 | Co-registration: 
 Eagloo offers multiple co-registration methods, including Nuth and Kääb, Iterative Closest Point (ICP), and ICP + Nuth and Kääb.
 <br><br>
 
-### - Subtraction: 
+### 2.2 | Subtraction: 
 Easily subtract one DEM from another to analyze changes in terrain over time.
 <br><br>
 
-### - Interpolation: 
+### 2.3 | Interpolation: 
 Eagloo's interpolation capabilities include:
   1. Linear interpolation
   2. Hypsometric interpolation
   3. Local hypsometric interpolation
 <br><br>
 
-### - Errors:
+### 2.4 | Errors:
 Errors can be calculated through those different methods: 
   1. Unstandardized non-stationnarity errors 
   2. Standardized non-stationnarity errors
   3. Integrated and mean standardized error
 <br><br>
 
-### - Mass and volume calculation: 
+### 2.5 | Mass and volume calculation: 
 Calculate the mass and volume of specific areas within your DEMs.
 <br><br>
 
-### - Synthetic PDF generation: 
+### 2.6 | Synthetic PDF generation: 
 Eagloo can automatically generate a synthetic PDF to help you quickly and easily visualize your analysis results.
 You can click [here](/Eagloo_frontend_functions/github_assets/example_report_2013_2017_nuth_kaab.pdf) to see an example of a pdf.
 <br><br><br>
+
 ## 3 | Presentation of the Graphical User Interface
 <p align="center">
 <img src="/Eagloo_frontend_functions/github_assets/eagloo_frontend.jpg" height="500px" style="text-align:center;">
@@ -72,19 +73,19 @@ The work is consisting to:
 Various external libraries and packages were utilized, with the most frequently used resources presented below. A comprehensive list of all libraries used can be found [here](#7--recognition-of-open-source-use).
 <br><br>
 
-### Frontend
+### 6.1 | Frontend
 The user interface was developed using the [PySimpleGUI] (https://www.pysimplegui.org/en/latest/) package (under GNU GPL license).
 <br><br>
 
-### Processing data
+### 6.2 | Processing data
 To modify certain input and output data, the [GDAL](https://github.com/OSGeo/gdal) framework was utilized (under MIT license).
 <br><br>
 
-### Co-registration, Interpolation, Errors
+### 6.3 | Co-registration, Interpolation, Errors
 The functions used for co-registration, interpolation, and calculating errors of the digital elevation models (DEMs) are from the [xDEM](https://github.com/GlacioHack/xdem) package (under MIT license).
 <br><br>
 
-### PDF 
+### 6.4 | PDF 
 To automatically generate a PDF report, the [FPDF](http://www.fpdf.org/) library was utilized(no usage restriction). 
 <br><br><br>
 
