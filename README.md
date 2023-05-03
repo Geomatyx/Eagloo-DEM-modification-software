@@ -12,28 +12,8 @@
 Eagloo is a package designed for simplified the modification and analysis of Digital Elevation Models (DEMs). It is made to co-register, subtract, interpolate, compute errors, calculate mass and volume, and automatically generate a synthetic PDF.
 It is a tool for researchers, scientists, and anyone working with DEMs.
 
-## 2 | Work carried out 
-- Creation of a user interface that allows the use of specific functions for processing and analyzing digital elevation models (DEMs) without any knowledge of code
-- Improving the efficiency of DEM processing by using a pipeline approach
-- Creation of a function for automatically generate reports
-
-## 3 | External Open Source ressources used
-Various external libraries and packages were utilized, with the most frequently used resources presented below. A comprehensive list of all libraries used can be found at the bottom of the page.
-
-### Frontend
-The user interface was developed using the [PySimpleGUI] (https://www.pysimplegui.org/en/latest/) package (under GNU GPL license).
-
-### Processing data
-To modify certain input and output data, the [GDAL](https://github.com/OSGeo/gdal) framework was utilized (under MIT license).
-
-### Co-registration, Interpolation, Errors
-The functions used for co-registration, interpolation, and calculating errors of the digital elevation models (DEMs) are from the [xDEM](https://github.com/GlacioHack/xdem) package (under MIT license).
-
-### PDF 
-To automatically generate a PDF report, the [FPDF](http://www.fpdf.org/) library was utilized(no usage restriction). 
-
-## 4 | Features
-Eagloo offers a variety of features to help you analyse your DEMs, including:
+## 2 | Features
+This software offers a variety of features to help you analyse your DEMs, including:
 
 ### - Co-registration: 
 Eagloo offers multiple co-registration methods, including Nuth and Kääb, Iterative Closest Point (ICP), and ICP + Nuth and Kääb.
@@ -60,28 +40,37 @@ Calculate the mass and volume of specific areas within your DEMs.
 Eagloo can automatically generate a synthetic PDF to help you quickly and easily visualize your analysis results.
 You can click [here](/Eagloo_frontend_functions/github_assets/example_report_2013_2017_nuth_kaab.pdf) to see an example of a pdf.
 
-## 5 | Presentation of the Graphical User Interface
+## 3 | Presentation of the Graphical User Interface
 <p align="center">
 <img src="/Eagloo_frontend_functions/github_assets/eagloo_frontend.jpg" height="500px" style="text-align:center;">
 </p>
 
-## 6 | Installation
+## 4 | Installation
 Currently, Eagloo is only available on Linux.
   1. Clone this repository: git clone https://github.com/Geomatyx/Eagloo_software.git
   2. Install dependencies, right-click on "installing_dependencies.sh" and click on "run as program" (if "run as program" is not displayed: Preferences -> Permissions -> "Allow executing file as program")
   3. Open the software, right-click on "Eagloo_software.sh" and click on "run as program" (if "run as program" is not displayed: Preferences -> Permissions -> "Allow executing file as program")
 
-## 7 | Contributing
-To contribute to this project, please follow these steps:
+## 5 | Work carried out 
+The work is consisting to:
+- Create a user interface that allows the use of specific functions for processing and analyzing digital elevation models (DEMs) without any knowledge of code
+- Improve the efficiency of DEM processing by using a pipeline approach
+- Create of a function for automatically generate reports
 
-  1. Fork this repository
-  2. Create a new branch: git checkout -b feature-branch
-  3. Make your changes and commit them: git commit -am 'Add some feature'
-  4. Push to the branch: git push origin feature-branch
-  5. Create a pull request 
+## 6 | External Open Source ressources used
+Various external libraries and packages were utilized, with the most frequently used resources presented below. A comprehensive list of all libraries used can be found [here](#9 | Recognition of Open Source use).
 
-## 8 | License
-This repository is open-source and is licensed under the MIT license. See the [LICENSE](/LICENSE) file for details.
+### Frontend
+The user interface was developed using the [PySimpleGUI] (https://www.pysimplegui.org/en/latest/) package (under GNU GPL license).
+
+### Processing data
+To modify certain input and output data, the [GDAL](https://github.com/OSGeo/gdal) framework was utilized (under MIT license).
+
+### Co-registration, Interpolation, Errors
+The functions used for co-registration, interpolation, and calculating errors of the digital elevation models (DEMs) are from the [xDEM](https://github.com/GlacioHack/xdem) package (under MIT license).
+
+### PDF 
+To automatically generate a PDF report, the [FPDF](http://www.fpdf.org/) library was utilized(no usage restriction). 
 
 ## 9 | Recognition of Open Source use
 
@@ -129,8 +118,18 @@ In the Eagloo Repository these external open source packages were used at least 
     tornado
     tqdm
     xdem
+    
+## 8 | License
+This repository is open-source and is licensed under the MIT license. See the [LICENSE](/LICENSE) file for details.
 
+## 7 | Contributing
+To contribute to this project, please follow these steps:
 
+  1. Fork this repository
+  2. Create a new branch: git checkout -b feature-branch
+  3. Make your changes and commit them: git commit -am 'Add some feature'
+  4. Push to the branch: git push origin feature-branch
+  5. Create a pull request 
 
 
 
