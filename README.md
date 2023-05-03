@@ -88,21 +88,21 @@ xDEM: [![Zenodo](https://zenodo.org/badge/doi/10.5281/zenodo.4809697.svg)](https
 
 Related study:
 
-Coregistration:
-    Horizontal shift from aspect/slope relationship of Nuth and Kääb (2011),
-    Iterative closest point (ICP) of Besl and McKay (1992),
-Bias correction:
-    Along-track multi-sinusoidal noise by basin-hopping of Girod et al. (2017),
-Uncertainty analysis:
-    Heteroscedasticity and multi-range correlations from stable terrain of Hugonnet et al. (2022),
-Terrain attributes:
-    Slope, aspect and hillshade of either Horn (1981) or Zevenbergen and Thorne (1987),
-    Profile, plan and maximum curvature of Zevenbergen and Thorne (1987),
-    Topographic position index of Weiss (2001),
-    Terrain ruggedness index of either Riley et al. (1999) or Wilson et al. (2007),
-    Roughness of Dartnell (2000),
-    Rugosity of Jenness (2004),
-    Fractal roughness of Taud et Parrot (2005).
+- **Coregistration**:
+  - Horizontal shift from aspect/slope relationship of *[Nuth and Kääb (2011)](https://doi.org/10.5194/tc-5-271-2011)*,
+  - Iterative closest point (ICP) of *[Besl and McKay (1992)](http://dx.doi.org/10.1109/34.121791)*,
+- **Bias correction**:
+  - Along-track multi-sinusoidal noise by basin-hopping of *[Girod et al. (2017)](https://doi.org/10.3390/rs9070704)*,
+- **Uncertainty analysis**:
+  - Heteroscedasticity and multi-range correlations from stable terrain of *[Hugonnet et al. (2022)](https://doi.org/10.1109/JSTARS.2022.3188922)*,
+- **Terrain attributes**:
+  - Slope, aspect and hillshade of either *[Horn (1981)](http://dx.doi.org/10.1109/PROC.1981.11918)* or *[Zevenbergen and Thorne (1987)](http://dx.doi.org/10.1002/esp.3290120107)*,
+  - Profile, plan and maximum curvature of *[Zevenbergen and Thorne (1987)](http://dx.doi.org/10.1002/esp.3290120107)*,
+  - Topographic position index of *[Weiss (2001)](http://www.jennessent.com/downloads/TPI-poster-TNC_18x22.pdf)*,
+  - Terrain ruggedness index of either *[Riley et al. (1999)](http://download.osgeo.org/qgis/doc/reference-docs/Terrain_Ruggedness_Index.pdf)* or *[Wilson et al. (2007)](http://dx.doi.org/10.1080/01490410701295962)*,
+  - Roughness of *[Dartnell (2000)](http://dx.doi.org/10.14358/PERS.70.9.1081)*,
+  - Rugosity of *[Jenness (2004)](https://doi.org/10.2193/0091-7648(2004)032[0829:CLSAFD]2.0.CO;2)*,
+  - Fractal roughness of *[Taud et Parrot (2005)](https://doi.org/10.4000/geomorphologie.622)*.
 
 <br><br>
 
