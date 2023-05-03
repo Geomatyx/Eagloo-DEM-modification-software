@@ -63,7 +63,7 @@ Eagloo is only available on Linux.
 <br><br><br>
 
 ## 5 | Work carried out 
-The work is consisting to:
+The work which was carried out there is:
 - Create a user interface that allows the use of specific functions for processing and analyzing digital elevation models (DEMs) without any knowledge of code
 - Improve the efficiency of DEM processing by using a pipeline approach
 - Create of a function for automatically generate reports
