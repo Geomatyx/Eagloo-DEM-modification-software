@@ -54,7 +54,7 @@ Eagloo can automatically generate a synthetic PDF to help you quickly and easily
 
 ## 5 | Presentation of the frontend
 <p align="center">
-<img src="/Eagloo_frontend_functions/github_assets/eagloo_frontend.jpg" width="200px" height="200px" style="text-align:center;">
+<img src="/Eagloo_frontend_functions/github_assets/eagloo_frontend.jpg" height="500px" style="text-align:center;">
 </p>
 
 ## 6 | Installation
