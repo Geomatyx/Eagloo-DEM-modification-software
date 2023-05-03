@@ -9,7 +9,7 @@
 </p>
 
 ## 1 | Introduction
-Eagloo is a package designed for simplified Digital Elevation Models (DEMs) modification. It is made to co-register, subtract, interpolate, calculate mass and volume, and automatically generate a synthetic PDF. Eagloo is a tool for researchers, scientists, and anyone working with DEMs.
+Eagloo is a package designed for simplified the modification and analysis of Digital Elevation Models (DEMs). It is made to co-register, subtract, interpolate, compute errors, calculate mass and volume, and automatically generate a synthetic PDF. Eagloo is a tool for researchers, scientists, and anyone working with DEMs.
 
 ## 2 | Work carried out 
 - Creation of a user interface that allows the use of specific functions for processing and analyzing digital elevation models (DEMs) without any knowledge of code
@@ -45,6 +45,12 @@ Eagloo's interpolation capabilities include:
   1. Linear interpolation
   2. Hypsometric interpolation
   3. Local hypsometric interpolation
+
+### - Errors:
+Errors can be calculated through those different methods: 
+  1. Unstandardized non-stationnarity errors 
+  2. Standardized non-stationnarity errors
+  3. Integrated and mean standardized error
 
 ### - Mass and volume calculation: 
 Calculate the mass and volume of specific areas within your DEMs.
