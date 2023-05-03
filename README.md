@@ -7,11 +7,11 @@
 <p align="center">
 <img src="/Eagloo_frontend_functions/eagloo_logo.png" height="300px" style="text-align:center;">
 </p>
-  
+<br><br><br>
 ## 1 | Introduction
 Eagloo is a package designed for simplified the modification and analysis of Digital Elevation Models (DEMs). It is made to co-register, subtract, interpolate, compute errors, calculate mass and volume, and automatically generate a synthetic PDF.
 It is a tool for researchers, scientists, and anyone working with DEMs.
-<br><br>
+<br><br><br>
 ## 2 | Features
 This software offers a variety of features to help you analyse your DEMs, including:
   
@@ -39,24 +39,24 @@ Calculate the mass and volume of specific areas within your DEMs.
 ### - Synthetic PDF generation: 
 Eagloo can automatically generate a synthetic PDF to help you quickly and easily visualize your analysis results.
 You can click [here](/Eagloo_frontend_functions/github_assets/example_report_2013_2017_nuth_kaab.pdf) to see an example of a pdf.
-
+<br><br><br>
 ## 3 | Presentation of the Graphical User Interface
 <p align="center">
 <img src="/Eagloo_frontend_functions/github_assets/eagloo_frontend.jpg" height="500px" style="text-align:center;">
 </p>
-
+<br><br><br>
 ## 4 | Installation
 Eagloo is only available on Linux.
   1. Clone this repository: git clone https://github.com/Geomatyx/Eagloo_software.git
   2. Install dependencies, right-click on "installing_dependencies.sh" and click on "run as program" (if "run as program" is not displayed: Preferences -> Permissions -> "Allow executing file as program")
   3. Open the software, right-click on "Eagloo_software.sh" and click on "run as program" (if "run as program" is not displayed: Preferences -> Permissions -> "Allow executing file as program")
-
+<br><br><br>
 ## 5 | Work carried out 
 The work is consisting to:
 - Create a user interface that allows the use of specific functions for processing and analyzing digital elevation models (DEMs) without any knowledge of code
 - Improve the efficiency of DEM processing by using a pipeline approach
 - Create of a function for automatically generate reports
-
+<br><br><br>
 ## 6 | External Open Source ressources used
 Various external libraries and packages were utilized, with the most frequently used resources presented below. A comprehensive list of all libraries used can be found [here](#9 | Recognition of Open Source use).
 
@@ -71,7 +71,7 @@ The functions used for co-registration, interpolation, and calculating errors of
 
 ### PDF 
 To automatically generate a PDF report, the [FPDF](http://www.fpdf.org/) library was utilized(no usage restriction). 
-
+<br><br><br>
 ## 7 | Recognition of Open Source use
 
 In the Eagloo Repository these external open source packages were used at least one time. 
@@ -118,10 +118,10 @@ In the Eagloo Repository these external open source packages were used at least 
     tornado
     tqdm
     xdem
-    
+<br><br><br>    
 ## 8 | License
 This repository is open-source and is licensed under the MIT license. See the [LICENSE](/LICENSE) file for details.
-
+<br><br><br>
 ## 9 | Contributing
 To contribute to this project, please follow these steps:
 
