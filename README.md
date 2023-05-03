@@ -20,16 +20,16 @@ This software is designed for simplified some Digital Elevation Models (DEMs) mo
 Various external libraries and frameworks were utilized, with the most frequently used resources presented below. A comprehensive list of all libraries used can be found at the bottom of the page.
 
 ### Frontend
-The user interface was developed using the [PySimpleGUI](https://www.pysimplegui.org/en/latest/)(under GNU GPL license) library.
+The user interface was developed using the [PySimpleGUI](https://www.pysimplegui.org/en/latest/) library(under GNU GPL license).
 
 ### Processing data
-To modify certain input and output data, the [GDAL](https://github.com/OSGeo/gdal)(under MIT license) framework was utilized.
+To modify certain input and output data, the [GDAL](https://github.com/OSGeo/gdal) framework was utilized(under MIT license).
 
 ### Co-registration, Interpolation, Errors
 The functions used for co-registration, interpolation, and calculating errors of the digital elevation models (DEMs) are from the [xDEM](https://github.com/GlacioHack/xdem)(under MIT license).
 
 ### PDF 
-To automatically generate a PDF report, the [FPDF](http://www.fpdf.org/)(no usage restriction) library was utilized. 
+To automatically generate a PDF report, the [FPDF](http://www.fpdf.org/) library was utilized(no usage restriction). 
 
 ## 4 | Features
 Eagloo offers a variety of features to help you analyse your DEMs, including:
