@@ -72,7 +72,7 @@ The functions used for co-registration, interpolation, and calculating errors of
 ### PDF 
 To automatically generate a PDF report, the [FPDF](http://www.fpdf.org/) library was utilized(no usage restriction). 
 
-## 9 | Recognition of Open Source use
+## 7 | Recognition of Open Source use
 
 In the Eagloo Repository these external open source packages were used at least one time. 
 
@@ -122,7 +122,7 @@ In the Eagloo Repository these external open source packages were used at least 
 ## 8 | License
 This repository is open-source and is licensed under the MIT license. See the [LICENSE](/LICENSE) file for details.
 
-## 7 | Contributing
+## 9 | Contributing
 To contribute to this project, please follow these steps:
 
   1. Fork this repository
