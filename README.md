@@ -34,7 +34,7 @@ Eagloo's interpolation capabilities include:
 <br><br>
 
 ### 2.4 | Errors:
-Errors can be calculated through those different methods: 
+Errors can be calculated through the following methods: 
   1. Unstandardized non-stationnarity errors 
   2. Standardized non-stationnarity errors
   3. Integrated and mean standardized error
