@@ -82,7 +82,7 @@ To modify certain input and output data, the [GDAL](https://github.com/OSGeo/gda
 Source: <br>
 GDAL/OGR contributors (2022). GDAL/OGR Geospatial Data Abstraction
   software Library. Open Source Geospatial Foundation. URL https://gdal.org <br>
-  [![Zenodo]](https://zenodo.org/badge/doi/10.5281/zenodo.5884351.svg)
+  [![Zenodo](https://zenodo.org/badge/doi/10.5281/zenodo.5884351.svg)](https://zenodo.org/record/5884351)
 <br><br>
 
 ### 6.3 | Co-registration, Interpolation, Errors
