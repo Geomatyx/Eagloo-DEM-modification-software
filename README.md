@@ -52,13 +52,18 @@ Calculate the mass and volume of specific areas within your DEMs.
 ### - Synthetic PDF generation: 
 Eagloo can automatically generate a synthetic PDF to help you quickly and easily visualize your analysis results.
 
-## 5 | Installation
+## 5 | Presentation of the frontend
+<p align="center">
+<img src="/Eagloo_frontend_functions/github_assets/eagloo_frontend.jpg" width="200px" height="200px" style="text-align:center;">
+</p>
+
+## 6 | Installation
 Currently, Eagloo is only available on Linux.
   1. Clone this repository: git clone https://github.com/Geomatyx/Eagloo_software.git
   2. Install dependencies, right-click on "installing_dependencies.sh" and click on "run as program" (if "run as program" is not displayed: Preferences -> Permissions -> "Allow executing file as program")
   3. Open the software, right-click on "Eagloo_software.sh" and click on "run as program" (if "run as program" is not displayed: Preferences -> Permissions -> "Allow executing file as program")
 
-## 6 | Contributing
+## 7 | Contributing
 To contribute to this project, please follow these steps:
 
   1. Fork this repository
@@ -67,13 +72,12 @@ To contribute to this project, please follow these steps:
   4. Push to the branch: git push origin feature-branch
   5. Create a pull request 
 
-## 7 | License
+## 8 | License
 This repository is open-source and is licensed under the MIT license. See the [LICENSE](/LICENSE) file for details.
 
-## 8 | Recognition of Open Source use
+## 9 | Recognition of Open Source use
 
 In the Eagloo Repository these external open source packages were used at least one time. 
-If you use Open Source software in your project, be sure and supply information about the packages you used.
 
     
     attrs
